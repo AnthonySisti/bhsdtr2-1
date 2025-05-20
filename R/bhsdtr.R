@@ -182,8 +182,8 @@ The fitted object will be stored in the $jmapfit field of the bhsdtr model objec
     ## in SDT models stim_sign = -1, 1 (this variable slightly simplifies the model code)
     m$sdata$stim_sign = 2 * as.numeric(as.factor(as.character(m$adata$stimulus))) - 3
     m$sdata = make.sdata.matrices(m, force.id_log)
-    if(m$model == 'ordinal')
-        m$sdata$eta_is_fixed[1,1] = 1
+#    if(m$model == 'ordinal')
+#       m$sdata$eta_is_fixed[1,1] = 1
     ## bhsdtr_model object
     m = append(m, list(resp = resp.stim.vars$resp, stim = resp.stim.vars$stim))
     class(m) = c('bhsdtr_model', class(m))
